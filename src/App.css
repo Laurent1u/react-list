@@ -1,38 +1,133 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
+body {
+  height: 100vh;
+  background-color: aquamarine;
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  text-align: center;
+  padding: 20px 0;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+}
+
+.todo-input {
+  width: 200px;
+  padding: 4px 8px;
+  border: 0;
+  outline: none;
+}
+
+.todo-button {
+  padding: 4px 6px;
+  background-color: #65cca9;
+  border: 0;
+  margin-right: 10px;
+  outline: none;
+}
+
+.todo-button:hover {
+  background-color: #468e76;
+  cursor: pointer;
+}
+
+.fas {
+  color: #ffffff;
+}
+
+.select {
+  position: relative;
+  cursor: pointer;
+}
+
+.select:before {
+  content: "\f063";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  position: absolute;
+  display: block;
+  right: 0;
+  color: #ffffff;
+  background-color: #65cca9;
+  padding: 3px;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.select:hover:before {
+  background-color: #468e76;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.filter-todo {
+  padding: 4px;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+
+.todo-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-items: center;  
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.todo-list {
+  width: 40%;
+  list-style: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo {
+  display: flex;
+  width: 100%;
+  background-color: #ffffff;
+  margin: 5px 0;
+}
+
+.todo > button {
+  width: 10%;
+  padding: 5px 0;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+
+.todo-item {
+  width: 90%;
+  padding: 0 15px;
+  margin: auto;
+}
+
+.complete-btn {
+  background-color: green;
+  opacity: .6;
+}
+
+.complete-btn:hover {
+  opacity: 1;
+}
+
+.delete-btn {
+  background-color: red;
+  opacity: .6;
+}
+
+.delete-btn:hover {
+  opacity: 1;
+}
+
+.completed {
+  cursor: not-allowed;
+  text-decoration: line-through;
+  opacity: .5;
 }
