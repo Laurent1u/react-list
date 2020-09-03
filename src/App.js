@@ -23,7 +23,7 @@ function App() {
   const saveTodo = () => {
     if (inputText) {
       setTodo([...todos, {
-          id: Math.round(Math.random() * 100),
+          id: Math.random() * 1000,
           text: inputText, 
           completed: false}
       ]);
